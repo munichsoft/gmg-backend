@@ -2,8 +2,10 @@ services:
   - type: web
     name: gujarati-marketplace-germany-backend
     runtime: node
-    buildCommand: npm install
+    buildCommand: npm install --no-package-lock
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
+      - key: NPM_CONFIG_PRODUCTION
+        value: "false"
